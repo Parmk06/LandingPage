@@ -12,6 +12,20 @@
  * JS Standard: ESlint
  * 
 */
+// Function to create a list item and append it to the navbar
+function createNavItem() {
+    // Create a new list item
+    var newItem = document.createElement("li");
+
+    // Set the text content of the new item
+    newItem.textContent = sectionName;
+
+    // Append the new item to the navbar
+    document.getElementById("navbar__list").appendChild(newItem);
+}
+
+
+  
 
 /**
  * Comments should be present at the beginning of each procedure and class.
