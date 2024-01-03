@@ -75,6 +75,10 @@ section {
     color: #000;
     font-weight: bold;
     padding: 1em;
+   
+}
+#navbar__list{
+    background: #cc1;
 }
 
 .navbar__menu .menu__link {
@@ -91,6 +95,11 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar__menu .menu__link {
+    color: #000;
+   
+  }
+  
 /* Header Styles */
 .page__header {
     background: #fff;

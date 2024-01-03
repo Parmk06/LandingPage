@@ -12,20 +12,19 @@
  * JS Standard: ESlint
  * 
 */
-// Function to create a list item and append it to the navbar
-function createNavItem() {
-    // Create a new list item
-    var newItem = document.createElement("li");
+// 1. Function to create a list item and append it to the navbar
+const sections = document.querySelectorAll('.landing__container');
+const navBar = document.querySelector('#navbar__list');
 
-    // Set the text content of the new item
-    newItem.textContent = sectionName;
-
-    // Append the new item to the navbar
-    document.getElementById("navbar__list").appendChild(newItem);
-}
+sections.forEach((paragraph, i) => {
+    const navItem = document.createElement('li');
+    navItem.innerHTML = `<a href="#${paragraph.parentNode.id}" class="menu__link">Section ${i + 1}</a>`;
+    navBar.appendChild(navItem);
+});
 
 
-  
+
+
 
 /**
  * Comments should be present at the beginning of each procedure and class.
