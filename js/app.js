@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
   
     navigationList.addEventListener("click", scrollToSection);
   
-    // Hide fixed navigation bar while not scrolling
+    //function to manage scrolling 
     let isScrolling;
     window.addEventListener('scroll', function () {
       navigationList.classList.add("hidden");
       clearTimeout(isScrolling);
       isScrolling = setTimeout(function () {
         navigationList.classList.remove("hidden");
-      }, 2000);
+      }, 1000);
     });
   
     // Add a scroll-to-top button
