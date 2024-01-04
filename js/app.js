@@ -52,16 +52,27 @@ document.addEventListener('DOMContentLoaded', function () {
   
     document.addEventListener("scroll", makeSectionActive);
   
-    // Add functionality to scroll to sections
+    //Add functionality to scroll to sections
     function scrollToSection(event) {
-      if (event.target.nodeName.toLowerCase() === "a") {
-        event.preventDefault();
-        const sectionId = event.target.getAttribute("href");
-        if (sectionId.includes("#section")) {
-          document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
+        if (event.target.nodeName.toLowerCase() === "a") {
+          event.preventDefault();
+          const sectionId = event.target.getAttribute("href");
+          if (sectionId.includes("#section")) {
+            // Scroll to the selected section smoothly
+            const selectedSection = document.querySelector(sectionId);
+            selectedSection.scrollIntoView({ behavior: "smooth" });
+      
+            // Add a class or style to the selected section for the effect
+            selectedSection.classList.add("selected-section");
+      
+            // Remove the class or style after a delay (adjust the time based on your desired effect duration)
+            setTimeout(() => {
+              selectedSection.classList.remove("selected-section");
+            }, 1000); // Adjust this time (in milliseconds) based on your desired effect duration
+          }
         }
       }
-    }
+      
   
     navigationList.addEventListener("click", scrollToSection);
   
@@ -75,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 1000);
     });
   
-    // Add a scroll-to-top button
+   // Add a scroll-to-top button
     const scrollUpButton = document.createElement("button");
     scrollUpButton.textContent = "Scroll to Top";
     scrollUpButton.classList.add("scroll-to-top", "hidden");
