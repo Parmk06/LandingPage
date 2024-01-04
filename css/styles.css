@@ -19,18 +19,12 @@ body {
 }
 
 
-/* Typeography General*/
+/* Typeography General for mobile devices*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
-}
-
-@media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
+    font-size: 4em;
+    margin: 1em 1rem;
+    padding: 0;
 }
 
 h2 {
@@ -38,6 +32,7 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+    
 }
 
 p {
@@ -58,7 +53,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
-    padding: 0;
+    padding: 10px;
 }
 
 
@@ -68,23 +63,24 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
 }
 
 .navbar__menu li {
-    display: inline-block;
+    display: inline-flex;
     color: #000;
     font-weight: bold;
-    padding: 1em;
-   
+    padding: 1px;
+    font-size: 16px;
 }
+
 #navbar__list{
     background: #cc1;
 }
 
 .navbar__menu .menu__link{
-    display: block;
-    padding: 1em;
+    display:inline-block;
+    padding: 5px;;
     font-weight: bold;
     text-decoration: none;
     color: #000;
@@ -96,6 +92,16 @@ section {
     transition: ease 0.3s all;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color:#cc1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
 /* Header Styles */
 .page__header {
@@ -132,11 +138,42 @@ section {
     text-align: left;
 
 }
-
+/* media query for tablet and desktop screens*/
 @media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 2rem 2em;
+    }
+    .navbar__menu ul {
+        padding-left: 0;
+        margin: 0;
+        text-align: right;
+    }
     .landing__container {
         max-width: 50em;
-        padding: 4em;
+        padding: 3em;
+        font-size: 20px;
+    }
+    section {
+        position: relative;
+        min-height: 80vh;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar__menu li {
+        display: inline-flex;
+        color: #000;
+        font-weight: bold;
+        padding: 20px;
+        font-size: 22px;
+       
+    }
+    h2 {
+        border-bottom: 1px solid #cc1;
+        font-family: 'Oxygen', Sans-Serif;
+        font-size: 3em;
+        color: #fff;
+        
     }
 }
 
@@ -238,3 +275,16 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s; /* Adjust the animation duration (1s) as needed */
+  }
