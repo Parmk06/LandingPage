@@ -58,6 +58,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    padding: 1em;
 }
 
 
@@ -81,7 +82,7 @@ section {
     background: #cc1;
 }
 
-.navbar__menu .menu__link {
+.navbar__menu .menu__link{
     display: block;
     padding: 1em;
     font-weight: bold;
