@@ -12,30 +12,15 @@
  * JS Standard: ESlint
  * 
 */
-// 1. Function to create a list item and append it to the navbar
-const sections = document.querySelectorAll('.landing__container');
-const navBar = document.querySelector('#navbar__list');
 
-sections.forEach((paragraph, i) => {
-    const navItem = document.createElement('li');
-    navItem.innerHTML = `<a href="#${paragraph.parentNode.id}" class="menu__link">Section ${i + 1}</a>`;
-    navBar.appendChild(navItem);
-});
-
-
-
-
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
 
 /**
  * Define Global Variables
  * 
 */
 
+const sections = document.querySelectorAll('.landing__container');
+const navBar = document.querySelector('#navbar__list');
 
 /**
  * End Global Variables
@@ -51,8 +36,18 @@ sections.forEach((paragraph, i) => {
  * 
 */
 
-// build the nav
 
+//Function to create a list item and append it to the navbar
+function buildNav(){
+    sections.forEach((paragraph, i) => {
+        const navItem = document.createElement('li');
+        navItem.innerHTML = `<a href="#${paragraph.parentNode.id}" class="menu__link">Section ${i + 1}</a>`;
+        navBar.appendChild(navItem);
+    });
+}
+
+// build the nav
+buildNav();
 
 // Add class 'active' to section when near top of viewport
 
