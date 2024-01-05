@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollUpButton.classList.add("scroll-to-top", "hidden");
     document.body.appendChild(scrollUpButton);
   
-    scrollUpButton.addEventListener("click", function () {
+    scrollUpButton.addEventListener("click", function (event) {
+      event.preventDefault(); 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   
