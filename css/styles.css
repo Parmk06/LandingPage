@@ -79,14 +79,15 @@ section {
 }
 
 .navbar__menu .menu__link{
-    display:inline-block;
-    padding: 5px;;
+    padding: 1em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
-.navbar__menu .menu__link:hover {
+.navbar__menu .menu__link:hover,
+.navbar__menu .menu__active {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
@@ -122,14 +123,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
-/*border-bottom added for each selected-section*/
-.selected-section {
-    border-bottom: 5px solid #cc1; 
-    transition: border 2s ease; 
-    margin: 0;
-    
-  }
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
